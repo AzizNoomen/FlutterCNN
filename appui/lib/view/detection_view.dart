@@ -100,7 +100,7 @@ class _DetectionViewState extends State<DetectionView> {
                                                   fit: BoxFit.cover))),
                                       SizedBox(height: 20),
                                       viewModel.output != null
-                                          ? Text('${_output[0]['label']}',
+                                          ? Text('${_output}',
                                               style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 6, 6, 6),
