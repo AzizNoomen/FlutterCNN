@@ -76,6 +76,25 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\azizn\\Documents\\GitHub\\FlutterCNN\\appui\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
+                    },
+                    "to": {
+                        "startLines": "97,101",
+                        "startColumns": "4,4",
+                        "startOffsets": "5669,5850",
+                        "endLines": "100,103",
+                        "endColumns": "12,12",
+                        "endOffsets": "5845,6014"
+                    }
+                },
+                {
                     "source": "C:\\Users\\azizn\\.gradle\\caches\\transforms-3\\dd6cdc707004163dc3257bbdbe80b314\\transformed\\lifecycle-runtime-2.5.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -107,25 +126,6 @@
                         "startOffsets": "5364",
                         "endColumns": "59",
                         "endOffsets": "5419"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\azizn\\Documents\\GitHub\\systemerecommendation\\appui\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "97,101",
-                        "startColumns": "4,4",
-                        "startOffsets": "5669,5850",
-                        "endLines": "100,103",
-                        "endColumns": "12,12",
-                        "endOffsets": "5845,6014"
                     }
                 }
             ]
