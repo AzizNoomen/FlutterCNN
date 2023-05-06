@@ -17,7 +17,7 @@ final ano1 = AnoArg(name: " leaf spots", arg: [
   "size",
   "conditions"
 ], options: [
-  ["dark margins and gray or tan centers", "Brown to Black", "Yellow"],
+  ["dark margin and gray/tan center", "Brown to Black", "Yellow"],
   ["Big", "Small"],
   ["humid and wet", "warm"]
 ]);
@@ -26,7 +26,7 @@ final ano2 = AnoArg(name: " leaf blights", arg: [
   "Size",
   "Conditions"
 ], options: [
-  ["dark margins and gray or tan centers", "Brown to Black"],
+  ["dark margin and gray/tan center", "Brown to Black"],
   ["Big", "Small"],
   ["humid and wet", "warm", "dry and hot"]
 ]);

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../data/treatment.dart';
 import '../model/recommandation_model.dart';
 
 class RecommandationViewModel extends ChangeNotifier {
@@ -36,7 +35,7 @@ class RecommandationViewModel extends ChangeNotifier {
   }
 
   void modifyColor(bool color) {
-    _model.settColor(color);
+    _model.setColor(color);
   }
 
   void modifyX(int a) {

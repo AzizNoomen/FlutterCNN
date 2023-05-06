@@ -9,10 +9,10 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
+class MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage>
       body: ListView(children: <Widget>[
         const SizedBox(height: 15.0),
         const Padding(
-            padding: EdgeInsets.all(14.0),
+            padding: EdgeInsets.all(10.0),
             child: Text(
               'Top Picks',
               style: TextStyle(
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage>
                   fontWeight: FontWeight.w300),
             )),
         Padding(
-            padding: EdgeInsets.only(left: 15.0),
+            padding: EdgeInsets.only(left: 10.0),
             child: TabBar(
                 controller: tabController,
                 indicatorColor: Colors.transparent,

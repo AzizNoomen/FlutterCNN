@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../data/anomalies.dart';
 import '../data/treatment.dart';
 
 class RecommendationModel extends ChangeNotifier {
@@ -17,6 +16,7 @@ class RecommendationModel extends ChangeNotifier {
   String? get selectedOption1 => _selectedOption1;
   String? get selectedOption2 => _selectedOption2;
   String? get selectedOption3 => _selectedOption3;
+
   bool get text1 => _text1;
   bool get text2 => _text2;
   bool get text3 => _text3;
@@ -44,7 +44,7 @@ class RecommendationModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void settColor(bool color) {
+  void setColor(bool color) {
     this._coloryellow = color;
     notifyListeners();
   }

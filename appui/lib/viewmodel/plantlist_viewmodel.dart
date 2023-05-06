@@ -43,7 +43,7 @@ class PlantListViewModel extends ChangeNotifier {
   getPlantCard(String imagePath, String plantType, String plantName, int i) {
     return Stack(children: <Widget>[
       Container(
-          height: 325.0,
+          height: 290.0,
           width: 225.0,
           child: Container(
               decoration: BoxDecoration(
@@ -174,7 +174,7 @@ class PlantListViewModel extends ChangeNotifier {
                 ],
               ))),
       Padding(
-          padding: EdgeInsets.only(left: 90.0, top: 300.0),
+          padding: EdgeInsets.only(left: 90.0, top: 270.0),
           child: Container(
               height: 45.0,
               width: 45.0,

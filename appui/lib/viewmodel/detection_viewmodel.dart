@@ -6,7 +6,6 @@ import '../model/detection_model.dart';
 
 class DetectionViewModel extends ChangeNotifier {
   bool _loading = true;
-  File? _image;
   late DetectionModel _model;
 
   DetectionViewModel() {
@@ -22,8 +21,8 @@ class DetectionViewModel extends ChangeNotifier {
     if (image == null) {
       return null;
     }
-    _image = File(image.path);
-    await _model.classifyImage(_image!);
+    _model.image = File(image.path);
+    await _model.classifyImage(_model.image!);
     _loading = false;
   }
 
@@ -33,12 +32,12 @@ class DetectionViewModel extends ChangeNotifier {
     if (image == null) {
       return null;
     }
-    _image = File(image.path);
-    await _model.classifyImage(_image!);
+    _model.image = File(image.path);
+    await _model.classifyImage(_model.image!);
     _loading = false;
   }
 
-  File? get image => _image;
+  File? get image => _model.image;
 
   bool get loading => _loading;
 
