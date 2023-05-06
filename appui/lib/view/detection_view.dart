@@ -54,7 +54,8 @@ class _DetectionViewState extends State<DetectionView> {
                             ),
                           ),
                         ),
-                        Center(
+                        Container(
+                            width: MediaQuery.of(context).size.width,
                             child: viewModel.loading
                                 ? Container(
                                     child: Column(
@@ -100,7 +101,7 @@ class _DetectionViewState extends State<DetectionView> {
                                                   fit: BoxFit.cover))),
                                       SizedBox(height: 20),
                                       viewModel.output != null
-                                          ? Text('${_output}',
+                                          ? Text('${_output[0]['label']}',
                                               style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 6, 6, 6),

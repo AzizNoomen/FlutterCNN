@@ -11,13 +11,14 @@ class PlantListViewModel extends ChangeNotifier {
 
   PlantListViewModel() {
     _model = PlantListModel();
+
     _scrollController = ScrollController();
     _scrollController.addListener(changeDescription);
   }
 
   changeDescription() {
     var value = _scrollController.offset.round();
-    var descIndex = (value / 295).round();
+    var descIndex = (value / 235).round();
     _model.description = _model.list[descIndex].description;
     _model.plant = _model.list[descIndex].name;
     notifyListeners();

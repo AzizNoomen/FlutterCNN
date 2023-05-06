@@ -113,13 +113,13 @@ class _PlantDetailState extends State<PlantDetail> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'All to know...',
+                      'All to know',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 25.0,
                           fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: 12.0),
+                    SizedBox(height: 7.0),
                     Container(
                       width: 360,
                       child: Wrap(children: [
@@ -132,14 +132,15 @@ class _PlantDetailState extends State<PlantDetail> {
                         ),
                       ]),
                     ),
-                    SizedBox(height: 30.0),
+                    SizedBox(height: 15.0),
+                    widget.index <= 3 ?
                     Text(
                       'Anomalies',
                       style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 20.0,
                           fontWeight: FontWeight.w600),
-                    ),
+                    ): Container(),
                     SizedBox(height: 10.0),
                     if (allList[widget.index].anomalies != null)
                       for (int i = 0;
