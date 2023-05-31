@@ -16,10 +16,10 @@ class RecommendationView extends StatefulWidget {
   final String output;
   final File? image;
   @override
-  _RecommendationViewState createState() => _RecommendationViewState();
+  RecommendationViewState createState() => RecommendationViewState();
 }
 
-class _RecommendationViewState extends State<RecommendationView> {
+class RecommendationViewState extends State<RecommendationView> {
   @override
   Widget build(BuildContext context, {indanomaly, output, image}) {
     return ChangeNotifierProvider(
@@ -348,10 +348,20 @@ class _RecommendationViewState extends State<RecommendationView> {
                                                   child: Column(
                                                     children: [
                                                       Container(
-                                                          child: Text(viewModel
-                                                              .afficherRecommandation(
-                                                                  widget
-                                                                      .indanomaly)))
+                                                          child: Text(
+                                                              viewModel
+                                                                  .afficherRecommandation(
+                                                                      widget
+                                                                          .indanomaly),
+                                                              style: TextStyle(
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          255,
+                                                                          6,
+                                                                          6,
+                                                                          6),
+                                                                  fontSize:
+                                                                      15)))
                                                     ],
                                                   )))
                                           : Container()),

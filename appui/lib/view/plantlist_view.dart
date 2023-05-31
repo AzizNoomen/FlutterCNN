@@ -2,21 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../model/plantlist_model.dart';
 import 'package:stacked/stacked.dart';
-
 import '../viewmodel/plantlist_viewmodel.dart';
 
 class PlantListView extends StatefulWidget {
   const PlantListView({super.key, required this.title});
   final String title;
-  _PlantListViewState createState() => _PlantListViewState();
+  PlantListViewState createState() => PlantListViewState();
 }
 
-class _PlantListViewState extends State<PlantListView> {
+class PlantListViewState extends State<PlantListView> {
   PlantListViewModel model = PlantListViewModel();
   @override
   void initState() {
     super.initState();
-   
   }
 
   Widget build(BuildContext context) {
@@ -48,7 +46,6 @@ class _PlantListViewState extends State<PlantListView> {
                                           viewModel
                                               .listchanger(widget.title)[i]
                                               .imageUrl,
-                                          
                                           viewModel
                                               .listchanger(widget.title)[i]
                                               .type,
@@ -83,7 +80,7 @@ class _PlantListViewState extends State<PlantListView> {
                                 style: const TextStyle(
                                     fontFamily: 'Montserrat',
                                     color: Colors.black,
-                                    fontSize: 17.0,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.w300),
                               )),
                         ],

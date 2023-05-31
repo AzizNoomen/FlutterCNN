@@ -8,10 +8,10 @@ import 'package:stacked/stacked.dart';
 
 class DetectionView extends StatefulWidget {
   @override
-  _DetectionViewState createState() => _DetectionViewState();
+  DetectionViewState createState() => DetectionViewState();
 }
 
-class _DetectionViewState extends State<DetectionView> {
+class DetectionViewState extends State<DetectionView> {
   List<dynamic> _output = [
     {'confidence': 0.9978812336921692, 'index': 0, 'label': "healthy"}
   ];
@@ -30,7 +30,7 @@ class _DetectionViewState extends State<DetectionView> {
         body: Consumer<DetectionViewModel>(
           builder: (context, viewModel, child) {
             return ViewModelBuilder<DetectionModel>.reactive(
-                builder: (context, model, child) => ListView(
+                builder: (context, model, child) => Column(
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.only(right: 50.0, left: 10),
@@ -43,8 +43,10 @@ class _DetectionViewState extends State<DetectionView> {
                                 IconButton(
                                   icon: Icon(
                                     Icons.arrow_back,
-                                    color: Colors.black,
-                                    size: 40,
+                                    color: const Color.fromARGB(0, 0, 0, 0)
+                                        .withOpacity(
+                                      0.8,
+                                    ),
                                   ),
                                   onPressed: () {
                                     Navigator.of(context).pop();
@@ -59,7 +61,7 @@ class _DetectionViewState extends State<DetectionView> {
                                 ? Container(
                                     child: Column(
                                     children: const <Widget>[
-                                      SizedBox(height: 180.0),
+                                      SizedBox(height: 110.0),
                                       Text(
                                         "The selected image",
                                         style: TextStyle(
@@ -95,12 +97,12 @@ class _DetectionViewState extends State<DetectionView> {
                                                   BorderRadius.circular(10.0),
                                               child: Image.file(
                                                   viewModel.image!,
-                                                  width: 320,
+                                                  width: 300,
                                                   height: 300,
                                                   fit: BoxFit.cover))),
                                       SizedBox(height: 20),
                                       viewModel.output != null
-                                          ? Text('${_output}',
+                                          ? Text('${_output[0]['label']}',
                                               style: TextStyle(
                                                   color: Color.fromARGB(
                                                       255, 6, 6, 6),
@@ -122,7 +124,7 @@ class _DetectionViewState extends State<DetectionView> {
                                   horizontal: 24, vertical: 17),
                               decoration: BoxDecoration(
                                   color: Color(0xFF399D63),
-                                  borderRadius: BorderRadius.circular(10.0)),
+                                  borderRadius: BorderRadius.circular(15.0)),
                               child: const Text(
                                 "Take a photo",
                                 style: TextStyle(
@@ -149,7 +151,7 @@ class _DetectionViewState extends State<DetectionView> {
                                   horizontal: 24, vertical: 17),
                               decoration: BoxDecoration(
                                   color: Color(0xFF399D63),
-                                  borderRadius: BorderRadius.circular(10.0)),
+                                  borderRadius: BorderRadius.circular(15.0)),
                               child: const Text(
                                 "Open Gallery",
                                 style: TextStyle(
@@ -161,11 +163,11 @@ class _DetectionViewState extends State<DetectionView> {
                               )),
                         ),
                         const SizedBox(
-                          height: 80.0,
+                          height: 50.0,
                         ),
                         Padding(
                             padding: EdgeInsets.only(
-                                left: 90.0, top: 10.0, right: 90.0),
+                                left: 90.0, top: 0.0, right: 90.0),
                             child: (!viewModel.loading) &&
                                     (_output[0]['label'] != " healthy")
                                 ? Container(

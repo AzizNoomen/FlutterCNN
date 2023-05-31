@@ -6,14 +6,12 @@ class PlantDetail extends StatefulWidget {
     super.key,
     required this.index,
   });
-
   final int index;
-
   @override
-  State<PlantDetail> createState() => _PlantDetailState();
+  State<PlantDetail> createState() => PlantDetailState();
 }
 
-class _PlantDetailState extends State<PlantDetail> {
+class PlantDetailState extends State<PlantDetail> {
   @override
   Widget build(BuildContext context, {index}) {
     return Material(
@@ -121,7 +119,7 @@ class _PlantDetailState extends State<PlantDetail> {
                     ),
                     SizedBox(height: 12.0),
                     Container(
-                      width: 360,
+                      width: 320,
                       child: Wrap(children: [
                         Text(
                           allList[widget.index].alltoknow,

@@ -29,8 +29,8 @@ class _Home extends State<Home> {
               ],
             )),
         Positioned(
-          top: -145,
-          left: -35,
+          top: MediaQuery.of(context).size.height - 900,
+          left: MediaQuery.of(context).size.width - 450,
           child: Image.asset(
             'assets/logo2.png',
             height: 450,
@@ -38,8 +38,8 @@ class _Home extends State<Home> {
           ),
         ),
         Positioned(
-          top: 450,
-          left: 100,
+          top: MediaQuery.of(context).size.height - 500,
+          left: MediaQuery.of(context).size.width - 270,
           child: Text(
             "Welcome",
             style: TextStyle(
@@ -50,8 +50,8 @@ class _Home extends State<Home> {
           ),
         ),
         Positioned(
-            top: 520,
-            left: 100,
+            top: MediaQuery.of(context).size.height - 350,
+            left: MediaQuery.of(context).size.width - 270,
             child: Text(
               "Detection of plant anomalies",
               style: TextStyle(
@@ -61,8 +61,8 @@ class _Home extends State<Home> {
               ),
             )),
         Positioned(
-            top: 560,
-            left: 110,
+            top: MediaQuery.of(context).size.height - 320,
+            left: MediaQuery.of(context).size.width - 270,
             child: Text(
               "Cure recommendation",
               style: TextStyle(
@@ -72,8 +72,8 @@ class _Home extends State<Home> {
               ),
             )),
         Positioned(
-            top: 655,
-            left: 75,
+            top: MediaQuery.of(context).size.height - 190,
+            left: MediaQuery.of(context).size.width - 310,
             child: GestureDetector(
               onTap: () {
                 Get.to(
